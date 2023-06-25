@@ -10,15 +10,15 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookDao {
-    @Query("SELECT * FROM 'tire_table' ORDER BY name ASC")
-    fun getAllTire(): Flow<List<Book>>
+    @Query("SELECT * FROM 'book_table' ORDER BY name ASC")
+    fun getAllBook(): Flow<List<Book>>
 
     @Insert
-    suspend fun insertTire(tire: Book)
+    suspend fun insertBook(book: Book)
 
     @Delete
-    suspend fun deleteTire(tire: Book)
+    suspend fun deleteBook(book: Book)
 
     @Update
-    fun updateTire(tire: Book)
+    fun updateBook(book: Book)
 }

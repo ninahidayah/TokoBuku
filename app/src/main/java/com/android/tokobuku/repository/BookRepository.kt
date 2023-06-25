@@ -4,17 +4,17 @@ import com.android.tokobuku.dao.BookDao
 import com.android.tokobuku.model.Book
 import kotlinx.coroutines.flow.Flow
 
-class BookRepository(private val tireDao: BookDao) {
-    val allTires: Flow<List<Book>> = tireDao.getAllTire()
-    suspend fun insertTire(tire: Book){
-        tireDao.insertTire(tire)
+class BookRepository(private val bookDao: BookDao) {
+    val allBook: Flow<List<Book>> = bookDao.getAllBook()
+    suspend fun insertBook(book: Book){
+        bookDao.insertBook(book)
     }
 
-    suspend fun deleteTire(tire: Book){
-        tireDao.deleteTire(tire)
+    suspend fun deleteBook(book: Book){
+        bookDao.deleteBook(book)
     }
 
-    suspend fun updateTire(tire: Book){
-        tireDao.updateTire(tire)
+    suspend fun updateBook(book: Book){
+        bookDao.updateBook(book)
     }
 }
