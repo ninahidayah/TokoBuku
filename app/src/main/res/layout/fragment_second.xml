@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".ui.SecondFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,8 +13,8 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="323dp"
+            android:layout_height="0dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:text="Nama Toko Buku"
@@ -23,33 +23,61 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_width="325dp"
+            android:layout_height="19dp"
             android:text="Alamat"
             app:layout_constraintEnd_toEndOf="@+id/nameEditText"
             app:layout_constraintStart_toStartOf="@+id/nameEditText"
             app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nama Pemilik"
+            app:layout_constraintEnd_toEndOf="@+id/addresEditText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/addresEditText"
+            app:layout_constraintTop_toBottomOf="@+id/addresEditText" />
+
         <EditText
             android:id="@+id/nameEditText"
-            android:layout_width="323dp"
-            android:layout_height="32dp"
+            android:layout_width="326dp"
+            android:layout_height="51dp"
             android:ems="10"
             android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/save"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.447"
-            app:layout_constraintStart_toStartOf="@+id/addresEditText"
-            app:layout_constraintTop_toBottomOf="@+id/addresEditText" />
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/ownerEditText"
+            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintStart_toStartOf="@+id/ownerEditText"
+            app:layout_constraintTop_toBottomOf="@+id/ownerEditText">
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone"
+                android:text="Hapus" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="@string/save" />
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/addresEditText"
@@ -57,8 +85,19 @@
             android:layout_height="41dp"
             android:ems="10"
             android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/ownerEditText"
+            android:layout_width="323dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
