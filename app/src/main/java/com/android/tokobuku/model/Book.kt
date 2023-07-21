@@ -13,5 +13,7 @@ data class Book(
     val id: Int = 0,
     val name: String,
     val address: String,
-    val owner: String
+    val owner: String,
+    val latitude: Double?,
+    val longitude: Double?
 ) : Parcelable
